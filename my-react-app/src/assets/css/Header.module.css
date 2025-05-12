@@ -1,8 +1,14 @@
 .header {
-    width: 100%;
-    padding: 1rem 0;
-    margin: 0 auto;
-  }
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  background-color: #061624; /* Couleur de fond */
+  position: fixed; /* Fixe le header en haut de la page */
+  top: 0; /* Positionné tout en haut */
+  left: 0; /* Aligné à gauche */
+  right: 0; /* Aligné à droite */
+  border-bottom: #DEB992 2px solid; /* Bordure en bas */
+}
   
   .nav {
     width: 100%;
@@ -38,8 +44,8 @@
   /* Style optionnel pour les liens */
   .nav a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    color: #DEB992;
+    font-weight: 800;
     padding: 0.5rem 1rem;
   }
   

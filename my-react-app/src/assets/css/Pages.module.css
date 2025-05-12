@@ -24,10 +24,15 @@ main {
     background-repeat: no-repeat;
     min-height: 100vh; /* Pour que le fond couvre toute la hauteur de l'écran */
     width: 100%;
+        padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header */
+    box-sizing: border-box; /* Assurez-vous que le padding ne s'ajoute pas à la hauteur totale */
+
   }
 
     .homeContainer h1 {
         color: white; /* Couleur du texte */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
         font-size: 3rem; /* Taille de la police */
+        margin: 0; /* Supprime la marge par défaut */
+        padding-top: 20px; /* Ajoute un peu d'espace autour du texte */
     }   
