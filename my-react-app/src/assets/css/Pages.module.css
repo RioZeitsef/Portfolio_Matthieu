@@ -1,0 +1,33 @@
+html {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+main {
+    flex: 1;
+}
+
+.homeContainer {
+    background-image: url('../images/Space_wpp.webp'); /* Ajustez le chemin selon l'emplacement de votre image */
+    background-size: cover; /* Pour couvrir tout l'espace disponible */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Pour que le fond couvre toute la hauteur de l'écran */
+    width: 100%;
+  }
+
+    .homeContainer h1 {
+        color: white; /* Couleur du texte */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
+        font-size: 3rem; /* Taille de la police */
+    }   
