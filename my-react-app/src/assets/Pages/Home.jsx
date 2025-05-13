@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "../css/Pages.module.css";
 import DescriptionCard from "../components/DescriptionCard";
+import ProjectCard from "../components/ProjectCards";
 
 const Home = () => {
     return (
@@ -16,6 +17,10 @@ const Home = () => {
                     cardStyles={{ backgroundColor: '#f5f5f5', borderRadius: '8px' }}
                 />
             </div>
+            <div className="projects">
+                <h2>Mes Projets</h2>
+                <ProjectCard /> 
+            </div>    
         </div>
     );
 }
