@@ -24,6 +24,17 @@ const Home = () => {
             </div>
             <div>
                 <SkillsSection />
+            </div>
+                        <div className="home">
+                <DescriptionCard 
+                    title={<span>Du web <strong>Vers l'IA</strong></span>}
+                    titleVariant="h4"
+                    description="Durant mon alternance j'ai eu la chance de pouvoir travailler sur un projet de recherche et développement autour de l'IA. J'ai pu découvrir les systèmes d'agents autonomes et leur fonctionnement. J'ai également pu mettre en place un système de gestion de version pour le code source du projet, ce qui m'a permis de mieux comprendre les enjeux de la gestion de code dans un environnement collaboratif."
+                    descriptionVariant="body1"
+                    width="100%"
+                    showBullet={false}
+                    cardStyles={{ backgroundColor: '#f5f5f5', borderRadius: '8px' }}
+                />
             </div>    
         </div>
     );

@@ -3,10 +3,10 @@ import { Box, CircularProgress, Card, CardContent, Typography, Grid } from '@mui
 import PropTypes from 'prop-types';
 import ReactLogo from "../images/skills_images/react-icon.png"
 import PythonLogo from "../images/skills_images/python-icon.png"
-import CssLogo from "../images/skills_images/css-icon.webp"
-import NodeLogo from "../images/skills_images/nodejs-icon.png"
+import CssLogo from "../images/skills_images/css-icon.png"
+import NodeLogo from "../images/skills_images/nodejs-icon.svg"
 import GitLogo from "../images/skills_images/git-icon.png"
-import JavascriptLogo from "../images/skills_images/javascript-icon.webp"
+import JavascriptLogo from "../images/skills_images/javascript-icon.png"
 
 // Composant pour afficher une compétence individuelle
 const SkillCard = ({ name, logo, level }) => {
@@ -48,15 +48,15 @@ const SkillCard = ({ name, logo, level }) => {
             src={logo} 
             alt={`${name} logo`} 
             style={{ 
-              maxWidth: '80%', 
-              maxHeight: '100%', 
+              maxWidth: '70%', 
+              maxHeight: '80%', 
               objectFit: 'contain' 
             }} 
           />
         </Box>
       </Box>
       <CardContent sx={{ pt: 0, pb: '8px !important', textAlign: 'center' }}>
-        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', padding: '8px' }}>
           {name}
         </Typography>
         <Typography variant="caption" color="text.secondary">
