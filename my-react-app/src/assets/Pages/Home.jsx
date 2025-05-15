@@ -2,6 +2,7 @@ import React from "react";
 import Styles from "../css/Pages.module.css";
 import DescriptionCard from "../components/DescriptionCard";
 import ProjectCard from "../components/ProjectCards";
+import SkillsSection from "../components/SkillsCard";
 
 const Home = () => {
     return (
@@ -20,6 +21,9 @@ const Home = () => {
             <div className="projects">
                 <h2>Mes Projets</h2>
                 <ProjectCard /> 
+            </div>
+            <div>
+                <SkillsSection />
             </div>    
         </div>
     );

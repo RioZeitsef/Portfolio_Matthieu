@@ -1,0 +1,9 @@
+footer {
+  background-color: #061624; /* Couleur de fond */
+  .footertext {
+    color: white; 
+    padding: 20px 0; 
+    font-size: 1rem; 
+    margin: 0px
+  }
+}

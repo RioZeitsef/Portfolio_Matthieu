@@ -6,20 +6,24 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import image from '../images/project_images/mountain.jpg'
 
 const cards = [
   {
     id: 1,
+    img: image,
     title: 'Plants',
     description: 'Plants are essential for all life.',
   },
   {
     id: 2,
+    img: image,
     title: 'Animals',
     description: 'Animals are a part of nature.',
   },
   {
     id: 3,
+    img: image,
     title: 'Humans',
     description: 'Humans depend on plants and animals for survival.',
   },
@@ -33,8 +37,10 @@ function ProjectCard() {
   return (
     <Box
       sx={{
-        width: '100%',
+        maxWidth: '1200px',
+        width: '80%',
         display: 'grid',
+        margin: '0 auto',  
         gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', // Une colonne sur mobile, 3 colonnes sinon
         gap: 3,
         padding: '20px',
@@ -49,7 +55,7 @@ function ProjectCard() {
             height: '100%', 
             display: 'flex', 
             flexDirection: 'column',
-            maxWidth: isMobile ? '80%' : '100%', // Limite la largeur sur mobile pour centrer visuellement
+            maxWidth: isMobile ? '80%' : '80%', // Limite la largeur sur mobile pour centrer visuellement
           }}
         >
           <CardActionArea
@@ -73,6 +79,15 @@ function ProjectCard() {
               <Typography variant="h5" component="div" sx={{ marginBottom: 2 }}>
                 {card.title}
               </Typography>
+              <img
+                src={card.img}
+                alt={card.title}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '8px',
+                  marginBottom: '16px',
+                }} />
               <Typography variant="body2" color="text.secondary">
                 {card.description}
               </Typography>
