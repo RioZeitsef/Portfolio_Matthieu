@@ -21,6 +21,13 @@ const Home = () => {
                         borderRadius: '8px',
                         color: 'white', 
                     }}
+                    titleStyles={{ 
+                        fontSize: '2rem',
+                        textShadow: '1px 1px 3px rgba(0,0,0,0.3)',
+                        borderBottom: '2px solid #DEB992',
+                        paddingBottom: '10px',
+                        marginBottom: '20px'
+                    }}
                     img={HarleyToCode}
                     imgHeight={300}
                     imgAlt="Harley Davidson to Code"

@@ -25,8 +25,9 @@ export default function DescriptionCard({
   img = null, // URL de l'image
   imgHeight = 200, // Hauteur par défaut de l'image
   imgAlt = "Image", // Texte alternatif pour l'image
-  titleColor= "inherit",
-  descriptionColor= "inherit",
+  titleStyles = {},
+  descriptionStyles = {},
+  titleColor = "inherit",
   hideImageOnMobile = true // Nouvelle prop pour contrôler l'affichage sur mobile
 }) {
   // Utilisation du hook useMediaQuery pour détecter les écrans mobiles
@@ -50,11 +51,22 @@ export default function DescriptionCard({
               sx={{ objectFit: 'cover' }}
             />
           )}
-          <Typography variant={titleVariant} component="div" sx={{ color: titleColor }}>
+          <Typography 
+            variant={titleVariant} 
+            component="div" 
+            sx={{ titleStyles, 
+              color: titleColor, 
+              margin: '20px', 
+              fontWeight: 'bold'
+             }}>
             {title}
             {showBullet && bull}
           </Typography>
-          <Typography variant={descriptionVariant} sx={{ color: descriptionColor }}>
+          <Typography 
+              variant={descriptionVariant} 
+              sx={{ descriptionStyles,
+                marginBottom: '10px'
+               }}>
             {description}
             <br />
           </Typography>
@@ -76,7 +88,8 @@ DescriptionCard.propTypes = {
   img: PropTypes.string,
   imgHeight: PropTypes.number,
   imgAlt: PropTypes.string,
+  titleStyles: PropTypes.string,
   titleColor: PropTypes.string,
-  descriptionColor: PropTypes.string,
+  descriptionStyles: PropTypes.string,
   hideImageOnMobile: PropTypes.bool
 };
