@@ -1,0 +1,21 @@
+# Configuration de build
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# Redirection pour les applications SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# En-têtes pour servir correctement les fichiers
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"

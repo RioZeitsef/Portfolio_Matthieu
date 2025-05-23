@@ -32,7 +32,7 @@ const cards = [
 function ProjectCard() {
   const [selectedCard, setSelectedCard] = useState(0);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md')); // 900px correspond approximativement à 'md'
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Box
@@ -41,11 +41,11 @@ function ProjectCard() {
         width: '80%',
         display: 'grid',
         margin: '0 auto',  
-        gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', // Une colonne sur mobile, 3 colonnes sinon
+        gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
         gap: 3,
         padding: '20px',
         boxSizing: 'border-box',
-        justifyItems: isMobile ? 'center' : 'stretch', // Centre les cartes horizontalement sur mobile
+        justifyItems: isMobile ? 'center' : 'stretch',
       }}
     >
       {cards.map((card, index) => (
@@ -55,7 +55,7 @@ function ProjectCard() {
             height: '100%', 
             display: 'flex', 
             flexDirection: 'column',
-            maxWidth: isMobile ? '80%' : '80%', // Limite la largeur sur mobile pour centrer visuellement
+            maxWidth: isMobile ? '80%' : '80%',
           }}
         >
           <CardActionArea
