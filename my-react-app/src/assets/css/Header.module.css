@@ -8,6 +8,7 @@
   left: 0; /* Aligné à gauche */
   right: 0; /* Aligné à droite */
   border-bottom: #DEB992 2px solid; /* Bordure en bas */
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
 }
   
   .nav {
