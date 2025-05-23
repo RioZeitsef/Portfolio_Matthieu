@@ -1,5 +1,6 @@
 # Configuration de build
 [build]
+  base = "my-react-app"
   publish = "dist"
   command = "npm run build"
 
