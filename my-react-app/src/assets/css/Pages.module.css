@@ -17,6 +17,13 @@ main {
     flex: 1;
 }
 
+.home {
+    background-color: #061624;
+    max-height: 1000px;
+    display: flex;
+    height: 700px;
+}
+
 .homeContainer {
     background-image: url('../images/Space_wpp.webp'); /* Ajustez le chemin selon l'emplacement de votre image */
     background-size: cover; /* Pour couvrir tout l'espace disponible */
@@ -36,6 +43,7 @@ main {
         margin: 0; /* Supprime la marge par défaut */
         padding-top: 20px; /* Ajoute un peu d'espace autour du texte */
     }   
+
 
 h2 {
     font-size: 24px;
