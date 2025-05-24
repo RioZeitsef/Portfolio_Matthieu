@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "/images/project_images/ArgentBank.webp",
+    "title": "ArgentBank",
+    "description": "Création du front d'une agence bancaire.",
+    "detailedDescription": "Les plantes sont essentielles pour toute vie sur Terre. Elles produisent de l'oxygène par photosynthèse et servent de base à de nombreuses chaînes alimentaires. Ce projet explore la diversité des plantes et leur importance écologique.",
+    "technologies": ["React", "Redux", "Swagger", ""],
+    "githubLink": "https://github.com/username/plants-project",
+    "demoLink": "https://plants-demo.netlify.app"
+  },
+  {
+    "id": 2,
+    "img": "/images/project_images/724Events.webp",
+    "title": "724 Events",
+    "description": "Débuggage du site statique d'une agence d'événementiel.",
+    "detailedDescription": "Les animaux constituent une part importante de notre écosystème. Ce projet présente diverses espèces animales et leur rôle dans la préservation de l'équilibre naturel.",
+    "technologies": ["Vue.js", "Express", "PostgreSQL"],
+    "githubLink": "https://github.com/username/animals-project",
+    "demoLink": "https://animals-demo.netlify.app"
+  },
+  {
+    "id": 3,
+    "img": "/images/project_images/Kasa.webp",
+    "title": "Kasa",
+    "description": "Humans depend on plants and animals for survival.",
+    "detailedDescription": "Les humains dépendent des plantes et des animaux pour leur survie. Ce projet examine l'impact des activités humaines sur l'environnement et propose des solutions durables.",
+    "technologies": ["Angular", "Flask", "MySQL"],
+    "githubLink": "https://github.com/username/humans-project",
+    "demoLink": "https://humans-demo.netlify.app"
+  }
+]

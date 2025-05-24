@@ -3,7 +3,7 @@ import Styles from "../css/Pages.module.css";
 import DescriptionCard from "../components/DescriptionCard";
 import ProjectCard from "../components/ProjectCards";
 import SkillsSection from "../components/SkillsCard";
-import HarleyToCode from "../images/Harley_to_code.webp";
+import HarleyToCode from "/images/Harley_to_code.webp";
 
 const Home = () => {
     return (
@@ -35,7 +35,6 @@ const Home = () => {
                 />
             </div>
             <div className="projects">
-                <h2>Mes Projets</h2>
                 <ProjectCard /> 
             </div>
             <div>

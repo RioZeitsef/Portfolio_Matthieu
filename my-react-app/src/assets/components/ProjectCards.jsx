@@ -10,40 +10,13 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
-import image from '../images/project_images/mountain.jpg';
+import cards from '../../data/cardsData.json';
 
-const cards = [
-  {
-    id: 1,
-    img: image,
-    title: 'Plants',
-    description: 'Plants are essential for all life.',
-    detailedDescription: 'Les plantes sont essentielles pour toute vie sur Terre. Elles produisent de loxygène par photosynthèse et servent de base à de nombreuses chaînes alimentaires. Ce projet explore la diversité des plantes et leur importance écologique.',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    githubLink: 'https://github.com/username/plants-project',
-    demoLink: 'https://plants-demo.netlify.app'
-  },
-  {
-    id: 2,
-    img: image,
-    title: 'Animals',
-    description: 'Animals are a part of nature.',
-    detailedDescription: 'Les animaux constituent une part importante de notre écosystème. Ce projet présente diverses espèces animales et leur rôle dans la préservation de léquilibre naturel.',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    githubLink: 'https://github.com/username/animals-project',
-    demoLink: 'https://animals-demo.netlify.app'
-  },
-  {
-    id: 3,
-    img: image,
-    title: 'Humans',
-    description: 'Humans depend on plants and animals for survival.',
-    detailedDescription: 'Les humains dépendent des plantes et des animaux pour leur survie. Ce projet examine limpact des activités humaines sur lenvironnement et propose des solutions durables.',
-    technologies: ['Angular', 'Flask', 'MySQL'],
-    githubLink: 'https://github.com/username/humans-project',
-    demoLink: 'https://humans-demo.netlify.app'
-  },
-];
+// Cette fonction aide à construire les URLs correctes pour les images
+const getImagePath = (path) => {
+  // Sinon, construire le chemin complet pour les images locales
+  return path.startsWith('/') ? path : `/${path}`;
+};
 
 function ProjectCard() {
   const [selectedCard, setSelectedCard] = useState(0);
@@ -62,6 +35,7 @@ function ProjectCard() {
   };
 
   const modalStyle = {
+    backgroundColor: '#2c3e50',
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -70,25 +44,34 @@ function ProjectCard() {
     maxWidth: '800px',
     maxHeight: '90vh',
     overflow: 'auto',
-    bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
     borderRadius: '8px',
   };
 
+  // Debugging - affiche dans la console les chemins d'image
+  console.log('Cards data:', cards);
+  cards.forEach(card => {
+    console.log(`Image path for ${card.title}:`, getImagePath(card.img));
+  });
+
   return (
     <>
+      <Typography variant="h4" component="h2" sx={{ mb: 4, textAlign: 'center', py: 4, fontWeight: 'bold', fontSize: '2rem' }}> 
+        Mes Projets
+      </Typography>
       <Box
         sx={{
+          py: 4,
           maxWidth: '1200px',
           width: '80%',
           display: 'grid',
           margin: '0 auto',  
           gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
           gap: 3,
-          padding: '20px',
           boxSizing: 'border-box',
-          justifyItems: isMobile ? 'center' : 'stretch',
+          justifyItems: 'center',
+          justifyContent: 'center', // Correction de la casse
         }}
       >
         {cards.map((card, index) => (
@@ -98,7 +81,9 @@ function ProjectCard() {
               height: '100%', 
               display: 'flex', 
               flexDirection: 'column',
-              maxWidth: isMobile ? '80%' : '80%',
+              maxWidth: '100%', // Utiliser 100% pour une meilleure adaptation
+              width: '100%',
+              backgroundColor: '#2c3e50',
             }}
           >
             <CardActionArea
@@ -106,35 +91,36 @@ function ProjectCard() {
                 setSelectedCard(index);
                 handleOpenModal(card);
               }}
-              data-active={selectedCard === index ? '' : undefined}
               sx={{
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'stretch',
-                '&[data-active]': {
-                  backgroundColor: 'action.selected',
-                  '&:hover': {
-                    backgroundColor: 'action.selectedHover',
-                  },
-                },
               }}
             >
               <CardContent sx={{ flexGrow: 1, padding: '20px' }}>
-                <Typography variant="h5" component="div" sx={{ marginBottom: 2 }}>
+                <Typography variant="h5" component="div" sx={{ marginBottom: 2, color: '#DEB992', fontWeight: 'bold' }}>
                   {card.title}
                 </Typography>
                 <img
-                  src={card.img}
+                  src={getImagePath(card.img)}
                   alt={card.title}
                   style={{
                     width: '100%',
                     height: 'auto',
                     borderRadius: '8px',
                     marginBottom: '16px',
-                  }} />
-                <Typography variant="body2" color="text.secondary">
+                    objectFit: 'cover',
+                    aspectRatio: '16/9',
+                  }} 
+                  onError={(e) => {
+                    console.error(`Error loading image for ${card.title}:`, e);
+                    e.target.src = '/images/placeholder.png'; // Image de remplacement
+                    e.target.style.backgroundColor = '#f0f0f0';
+                  }}
+                />
+                <Typography variant="body2" color='#DEB992'>
                   {card.description}
                 </Typography>
               </CardContent>
@@ -143,7 +129,6 @@ function ProjectCard() {
         ))}
       </Box>
 
-      {/* Modal pour afficher plus d'informations */}
       <Modal
         open={openModal}
         onClose={handleCloseModal}
@@ -151,6 +136,7 @@ function ProjectCard() {
         aria-describedby="modal-description"
       >
         <Box sx={modalStyle}>
+          {/* Modal content */}
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <Typography id="modal-title" variant="h4" component="h2">
               {modalData?.title}
@@ -162,7 +148,7 @@ function ProjectCard() {
 
           <Box sx={{ mb: 3 }}>
             <img
-              src={modalData?.img}
+              src={modalData ? getImagePath(modalData.img) : ''}
               alt={modalData?.title}
               style={{
                 width: '100%',
@@ -170,15 +156,21 @@ function ProjectCard() {
                 objectFit: 'cover',
                 borderRadius: '8px',
               }}
+              onError={(e) => {
+                console.error(`Error loading modal image:`, e);
+                e.target.src = '/images/placeholder.png';
+                e.target.style.backgroundColor = '#f0f0f0';
+              }}
             />
           </Box>
 
-          <Typography id="modal-description" variant="body1" sx={{ mb: 2 }}>
+          {/* Rest of modal content */}
+          <Typography id="modal-description" variant="body1" sx={{ mb: 2, color: '#DEB992' }}>
             {modalData?.detailedDescription}
           </Typography>
 
           <Box sx={{ mb: 2 }}>
-            <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
+            <Typography variant="h6" component="h3" sx={{ mb: 1, color: '#DEB992', fontWeight: 'bold' }}>
               Technologies utilisées
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -186,7 +178,7 @@ function ProjectCard() {
                 <Box
                   key={index}
                   sx={{
-                    bgcolor: 'primary.main',
+                    bgcolor: '#061624',
                     color: 'white',
                     px: 1.5,
                     py: 0.5,
@@ -203,21 +195,17 @@ function ProjectCard() {
           <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
             <Button
               variant="contained"
-              color="primary"
+              sx={{ 
+                backgroundColor: '#061624', // Couleur dorée personnalisée
+                '&:hover': {
+                  backgroundColor: '#2d4a63' // Version plus foncée pour le survol
+                }
+              }}
               href={modalData?.githubLink}
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
-            </Button>
-            <Button
-              variant="outlined"
-              color="primary"
-              href={modalData?.demoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Démo en ligne
             </Button>
           </Box>
         </Box>

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Styles from "../css/Header.module.css";
-import logo from "../images/logo.webp";
+import logo from "/images/logo.webp";
 
 
 const Header = () => {

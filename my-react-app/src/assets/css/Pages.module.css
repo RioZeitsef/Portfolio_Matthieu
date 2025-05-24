@@ -24,7 +24,7 @@ main {
 }
 
 .homeContainer {
-    background-image: url('../images/Space_wpp.webp'); /* Ajustez le chemin selon l'emplacement de votre image */
+    background-image: url('/images/Space_wpp.webp'); /* Ajustez le chemin selon l'emplacement de votre image */
     background-size: cover; /* Pour couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat;
@@ -45,8 +45,9 @@ main {
 
 
 h2 {
-    font-size: 24px;
-    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    color: #DEB992
 }
 
 .SalestoDev {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, CircularProgress, Card, CardContent, Typography, Grid } from '@mui/material';
 import PropTypes from 'prop-types';
-import ReactLogo from "../images/skills_images/react-icon.png"
-import PythonLogo from "../images/skills_images/python-icon.png"
-import CssLogo from "../images/skills_images/css-icon.png"
-import NodeLogo from "../images/skills_images/nodejs-icon.svg"
-import GitLogo from "../images/skills_images/git-icon.png"
-import JavascriptLogo from "../images/skills_images/javascript-icon.png"
+import ReactLogo from "/images/skills_images/react-icon.png"
+import PythonLogo from "/images/skills_images/python-icon.png"
+import CssLogo from "/images/skills_images/css-icon.png"
+import NodeLogo from "/images/skills_images/nodejs-icon.svg"
+import GitLogo from "/images/skills_images/git-icon.png"
+import JavascriptLogo from "/images/skills_images/javascript-icon.png"
 
 // Composant pour afficher une compétence individuelle
 const SkillCard = ({ name, logo, level }) => {
@@ -88,7 +88,7 @@ const SkillsSection = () => {
 
   return (
     <Box sx={{ py: 4 }}>
-      <Typography variant="h4" component="h2" sx={{ mb: 4, textAlign: 'center' }}>
+      <Typography variant="h4" component="h2" sx={{ mb: 4, textAlign: 'center', fontWeight: 'bold', fontSize: '2rem' }}>
         Mes compétences techniques
       </Typography>
       <Grid container justifyContent="center" spacing={2}>
