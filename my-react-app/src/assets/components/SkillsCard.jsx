@@ -93,7 +93,7 @@ const SkillsSection = () => {
       </Typography>
       <Grid container justifyContent="center" spacing={2}>
         {skills.map((skill) => (
-          <Grid item key={skill.id} xs={6} sm={4} md={3} lg={2}>
+          <Grid item key={skill.id} size={{ xs: 7, sm: 4, md: 3, lg: 1 }}>
             <SkillCard 
               name={skill.name} 
               logo={skill.logo} 

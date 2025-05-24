@@ -19,9 +19,8 @@ main {
 
 .home {
     background-color: #061624;
-    max-height: 1000px;
+    max-height: 1200px;
     display: flex;
-    height: 700px;
 }
 
 .homeContainer {
