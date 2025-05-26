@@ -1,24 +1,20 @@
 import React from 'react';
 import { Box, CircularProgress, Card, CardContent, Typography, Grid } from '@mui/material';
 import PropTypes from 'prop-types';
-import ReactLogo from "/images/skills_images/react-icon.png"
-import PythonLogo from "/images/skills_images/python-icon.png"
-import CssLogo from "/images/skills_images/css-icon.png"
-import NodeLogo from "/images/skills_images/nodejs-icon.svg"
-import GitLogo from "/images/skills_images/git-icon.png"
-import JavascriptLogo from "/images/skills_images/javascript-icon.png"
+import skills from '../../data/cardsSkills.json'; 
 
 // Composant pour afficher une compétence individuelle
 const SkillCard = ({ name, logo, level }) => {
   return (
     <Card sx={{ 
-      maxWidth: 200, 
+      maxWidth: 300, 
       m: 1, 
       p: 2,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       position: 'relative',
+      backgroundColor: '#2c3e50',
       transition: 'transform 0.3s',
       '&:hover': {
         transform: 'translateY(-5px)',
@@ -28,10 +24,10 @@ const SkillCard = ({ name, logo, level }) => {
         <CircularProgress
           variant="determinate"
           value={level}
-          size={80}
-          thickness={4}
+          size={90}
+          thickness={3}
           sx={{
-            color: (theme) => level < 50 ? theme.palette.warning.main : theme.palette.success.main,
+            color: '#DEB992',
             position: 'absolute'
           }}
         />
@@ -50,16 +46,17 @@ const SkillCard = ({ name, logo, level }) => {
             style={{ 
               maxWidth: '70%', 
               maxHeight: '80%', 
-              objectFit: 'contain' 
+              objectFit: 'contain',
+              color: 'white', 
             }} 
           />
         </Box>
       </Box>
       <CardContent sx={{ pt: 0, pb: '8px !important', textAlign: 'center' }}>
-        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', padding: '8px' }}>
+        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', padding: '8px', color: '#AE7335' }}>
           {name}
         </Typography>
-        <Typography variant="caption" color="text.secondary">
+        <Typography variant="caption" sx={{ fontSize: '0.8rem', color: '#DEB992', fontWeight: 'bold' }}>
           {level}% de maîtrise
         </Typography>
       </CardContent>
@@ -77,14 +74,6 @@ SkillCard.propTypes = {
 // Composant principal qui affiche toutes les compétences
 const SkillsSection = () => {
   // Exemple de données pour les compétences
-  const skills = [
-    { id: 1, name: 'React', logo: ReactLogo, level: 85 },
-    { id: 2, name: 'JavaScript', logo: JavascriptLogo, level: 90 },
-    { id: 3, name: 'CSS', logo: CssLogo, level: 80 },
-    { id: 4, name: 'Node.js', logo: NodeLogo, level: 70 },
-    { id: 5, name: 'Python', logo: PythonLogo, level: 65 },
-    { id: 6, name: 'Git', logo: GitLogo, level: 75 },
-  ];
 
   return (
     <Box sx={{ py: 4 }}>
@@ -93,7 +82,7 @@ const SkillsSection = () => {
       </Typography>
       <Grid container justifyContent="center" spacing={2}>
         {skills.map((skill) => (
-          <Grid item key={skill.id} size={{ xs: 7, sm: 4, md: 3, lg: 1 }}>
+          <Grid item key={skill.id} size={{ xs: 7, sm: 4, md: 2, lg: 2 }}>
             <SkillCard 
               name={skill.name} 
               logo={skill.logo} 

@@ -4,9 +4,9 @@
     "img": "/images/project_images/ArgentBank.webp",
     "title": "ArgentBank",
     "description": "Création du front d'une agence bancaire.",
-    "detailedDescription": "Les plantes sont essentielles pour toute vie sur Terre. Elles produisent de l'oxygène par photosynthèse et servent de base à de nombreuses chaînes alimentaires. Ce projet explore la diversité des plantes et leur importance écologique.",
-    "technologies": ["React", "Redux", "Swagger", ""],
-    "githubLink": "https://github.com/username/plants-project",
+    "detailedDescription": "J'ai développé une application web bancaire complète avec React et Redux pour ArgentBank, incluant un système d'authentification sécurisé et une architecture évolutive. Le projet comprenait deux phases : l'implémentation du front-end avec gestion d'état Redux, et la conception d'API REST pour les fonctionnalités de transactions. J'ai mis l'accent sur les bonnes pratiques de développement durable (Green Code) et la création d'une architecture modulaire anticipant les évolutions futures du produit.",
+    "technologies": ["React", "Redux", "Swagger", "Redux Toolkit", "Axios", "CSS"],
+    "githubLink": "https://github.com/RioZeitsef/Projet11_ArgentBank-Front.git",
     "demoLink": "https://plants-demo.netlify.app"
   },
   {
@@ -14,19 +14,18 @@
     "img": "/images/project_images/724Events.webp",
     "title": "724 Events",
     "description": "Débuggage du site statique d'une agence d'événementiel.",
-    "detailedDescription": "Les animaux constituent une part importante de notre écosystème. Ce projet présente diverses espèces animales et leur rôle dans la préservation de l'équilibre naturel.",
-    "technologies": ["Vue.js", "Express", "PostgreSQL"],
-    "githubLink": "https://github.com/username/animals-project",
+    "detailedDescription": "J'ai pris en charge la finalisation d'un site web critique pour l'agence 724events en reprenant le travail d'un développeur précédent. Ma mission consistait à identifier et résoudre les bugs existants, compléter les fonctionnalités manquantes, et établir un protocole de test complet. Ce projet m'a permis de démontrer mes compétences en débogage, maintenance de code legacy, et création de documentation technique pour assurer la qualité et la fiabilité du produit final.",
+    "technologies": ["Lighthouse", "Javascript", "CSS"],
+    "githubLink": "https://github.com/RioZeitsef/Projet9_724events.git",
     "demoLink": "https://animals-demo.netlify.app"
   },
   {
     "id": 3,
     "img": "/images/project_images/Kasa.webp",
     "title": "Kasa",
-    "description": "Humans depend on plants and animals for survival.",
-    "detailedDescription": "Les humains dépendent des plantes et des animaux pour leur survie. Ce projet examine l'impact des activités humaines sur l'environnement et propose des solutions durables.",
-    "technologies": ["Angular", "Flask", "MySQL"],
-    "githubLink": "https://github.com/username/humans-project",
-    "demoLink": "https://humans-demo.netlify.app"
+    "description": "Création d'un site de location immobilière saisonnière.",
+    "detailedDescription": "J'ai développé une galerie photo interactive et des composants d'interface utilisateur en respectant des spécifications techniques précises. Ce projet m'a permis de créer des composants React réutilisables avec une attention particulière portée à l'expérience utilisateur et au responsive design. Les fonctionnalités incluent un système de navigation circulaire avancé, une gestion intelligente de l'affichage des contrôles, et des composants d'accordéon interactifs avec gestion d'état dynamique.",
+    "technologies": ["React", "Vite", "ReactRouter", "CSS"],
+    "githubLink": "https://github.com/RioZeitsef/Projet7_Kasa.git"
   }
 ]

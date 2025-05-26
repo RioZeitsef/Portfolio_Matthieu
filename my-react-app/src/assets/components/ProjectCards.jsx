@@ -170,7 +170,7 @@ function ProjectCard() {
           </Typography>
 
           <Box sx={{ mb: 2 }}>
-            <Typography variant="h6" component="h3" sx={{ mb: 1, color: '#DEB992', fontWeight: 'bold' }}>
+            <Typography variant="h6" component="h3" sx={{ mb: 1, color: '#DEB992', fontWeight: 'bold', paddingBottom: '1rem' }}>
               Technologies utilisées
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
