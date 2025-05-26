@@ -40,7 +40,7 @@ const Home = () => {
             <div>
                 <SkillsSection />
             </div>
-                        <div className="home">
+            <div className={Styles.home}>
                 <DescriptionCard 
                     title={<span>Du web <strong>Vers l'IA</strong></span>}
                     titleVariant="h4"
@@ -48,7 +48,18 @@ const Home = () => {
                     descriptionVariant="body1"
                     width="100%"
                     showBullet={false}
-                    cardStyles={{ backgroundColor: '#f5f5f5', borderRadius: '8px' }}
+                    cardStyles={{ 
+                        backgroundColor: '#061624', 
+                        borderRadius: '8px',
+                        color: 'white', 
+                    }}
+                    titleStyles={{ 
+                        fontSize: '2rem',
+                        textShadow: '1px 1px 3px rgba(0,0,0,0.3)',
+                        borderBottom: '2px solid #DEB992',
+                        paddingBottom: '10px',
+                        marginBottom: '20px'
+                    }}
                 />
             </div>    
         </div>

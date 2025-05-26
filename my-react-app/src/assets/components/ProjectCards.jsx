@@ -57,7 +57,7 @@ function ProjectCard() {
 
   return (
     <>
-      <Typography variant="h4" component="h2" sx={{ mb: 4, textAlign: 'center', py: 4, fontWeight: 'bold', fontSize: '2rem' }}> 
+      <Typography variant="h4" component="h2" sx={{textAlign: 'center', py: 8, fontWeight: 'bold', fontSize: '2rem' }}> 
         Mes Projets
       </Typography>
       <Box

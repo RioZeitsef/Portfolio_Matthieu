@@ -9,7 +9,7 @@ const SkillCard = ({ name, logo, level }) => {
     <Card sx={{ 
       maxWidth: 300, 
       m: 1, 
-      p: 2,
+      p: 3,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -77,7 +77,7 @@ const SkillsSection = () => {
 
   return (
     <Box sx={{ py: 4 }}>
-      <Typography variant="h4" component="h2" sx={{ mb: 4, textAlign: 'center', fontWeight: 'bold', fontSize: '2rem' }}>
+      <Typography variant="h4" component="h2" sx={{ py: 8, textAlign: 'center', fontWeight: 'bold', fontSize: '2rem' }}>
         Mes compétences techniques
       </Typography>
       <Grid container justifyContent="center" spacing={2}>
