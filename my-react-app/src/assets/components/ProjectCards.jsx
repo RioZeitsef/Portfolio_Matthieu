@@ -7,6 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
@@ -134,81 +135,84 @@ function ProjectCard() {
         onClose={handleCloseModal}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
+        closeAfterTransition
       >
-        <Box sx={modalStyle}>
-          {/* Modal content */}
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-            <Typography id="modal-title" variant="h4" component="h2">
-              {modalData?.title}
+        <Fade in={openModal} timeout={500}>
+          <Box sx={modalStyle}>
+            {/* Modal content */}
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+              <Typography id="modal-title" variant="h4" component="h2">
+                {modalData?.title}
+              </Typography>
+              <IconButton onClick={handleCloseModal} aria-label="Fermer">
+                <CloseIcon />
+              </IconButton>
+            </Box>
+
+            <Box sx={{ mb: 3 }}>
+              <img
+                src={modalData ? getImagePath(modalData.img) : ''}
+                alt={modalData?.title}
+                style={{
+                  width: '100%',
+                  maxHeight: '400px',
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                }}
+                onError={(e) => {
+                  console.error(`Error loading modal image:`, e);
+                  e.target.src = '/images/placeholder.png';
+                  e.target.style.backgroundColor = '#f0f0f0';
+                }}
+              />
+            </Box>
+
+            {/* Rest of modal content */}
+            <Typography id="modal-description" variant="body1" sx={{ mb: 2, color: '#DEB992' }}>
+              {modalData?.detailedDescription}
             </Typography>
-            <IconButton onClick={handleCloseModal} aria-label="Fermer">
-              <CloseIcon />
-            </IconButton>
-          </Box>
 
-          <Box sx={{ mb: 3 }}>
-            <img
-              src={modalData ? getImagePath(modalData.img) : ''}
-              alt={modalData?.title}
-              style={{
-                width: '100%',
-                maxHeight: '400px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-              }}
-              onError={(e) => {
-                console.error(`Error loading modal image:`, e);
-                e.target.src = '/images/placeholder.png';
-                e.target.style.backgroundColor = '#f0f0f0';
-              }}
-            />
-          </Box>
+            <Box sx={{ mb: 2 }}>
+              <Typography variant="h6" component="h3" sx={{ mb: 1, color: '#DEB992', fontWeight: 'bold', paddingBottom: '1rem' }}>
+                Technologies utilisées
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {modalData?.technologies.map((tech, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      bgcolor: '#061624',
+                      color: 'white',
+                      px: 1.5,
+                      py: 0.5,
+                      borderRadius: '16px',
+                      fontSize: '0.85rem',
+                    }}
+                  >
+                    {tech}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
 
-          {/* Rest of modal content */}
-          <Typography id="modal-description" variant="body1" sx={{ mb: 2, color: '#DEB992' }}>
-            {modalData?.detailedDescription}
-          </Typography>
-
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="h6" component="h3" sx={{ mb: 1, color: '#DEB992', fontWeight: 'bold', paddingBottom: '1rem' }}>
-              Technologies utilisées
-            </Typography>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-              {modalData?.technologies.map((tech, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    bgcolor: '#061624',
-                    color: 'white',
-                    px: 1.5,
-                    py: 0.5,
-                    borderRadius: '16px',
-                    fontSize: '0.85rem',
-                  }}
-                >
-                  {tech}
-                </Box>
-              ))}
+            <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
+              <Button
+                variant="contained"
+                sx={{ 
+                  backgroundColor: '#061624', // Couleur dorée personnalisée
+                  '&:hover': {
+                    backgroundColor: '#2d4a63' // Version plus foncée pour le survol
+                  }
+                }}
+                href={modalData?.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </Button>
             </Box>
           </Box>
-
-          <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
-            <Button
-              variant="contained"
-              sx={{ 
-                backgroundColor: '#061624', // Couleur dorée personnalisée
-                '&:hover': {
-                  backgroundColor: '#2d4a63' // Version plus foncée pour le survol
-                }
-              }}
-              href={modalData?.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </Button>
-          </Box>
-        </Box>
+        </Fade>  
       </Modal>
     </>
   );
