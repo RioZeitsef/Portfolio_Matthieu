@@ -72,7 +72,7 @@ function SkillsAccordion() {
              }}>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
                     <Typography 
-                        variant="body2"
+                        font-size={isMobile ? '0.9rem' : '1rem'}
                         sx={{
                         color: '#DEB992',
                         display: { xs: 'block' ,sm : 'block' },
