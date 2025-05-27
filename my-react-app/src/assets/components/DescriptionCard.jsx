@@ -22,13 +22,14 @@ export default function DescriptionCard({
   descriptionVariant = "body2", 
   showBullet = true,
   cardStyles = {},
-  img = null, // URL de l'image
-  imgHeight = 200, // Hauteur par défaut de l'image
-  imgAlt = "Image", // Texte alternatif pour l'image
+  img = null,
+  imgHeight = 200, 
+  imgAlt = "Image", 
   titleStyles = {},
   descriptionStyles = {},
   titleColor = "inherit",
-  hideImageOnMobile = true // Nouvelle prop pour contrôler l'affichage sur mobile
+  hideImageOnMobile = true,
+  additionalContent = null
 }) {
   // Utilisation du hook useMediaQuery pour détecter les écrans mobiles
   const theme = useTheme();
@@ -71,6 +72,7 @@ export default function DescriptionCard({
             <br />
           </Typography>
         </CardContent>
+        {additionalContent && additionalContent}
       </Card>
     </Box>
   );
