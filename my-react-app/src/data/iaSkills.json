@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Prompt Engineering",
+    "description": "Lors de mon apprentissage, j’ai développé une expertise dans l'art du Prompt Engineering, me permettant de concevoir des instructions précises et efficaces pour interagir avec des modèles d'IA générative. Cette compétence m’a permis d’optimiser les performances des IA selon les besoins métiers spécifiques, tout en garantissant pertinence et cohérence des résultats."
+  },
+  {
+    "id": 2,
+    "title": "Product Owner IA",
+    "description": "J’ai exercé le rôle de Product Owner IA, en assurant la liaison entre les équipes techniques et les besoins utilisateurs. J’ai piloté des projets d’intégration de l’intelligence artificielle en définissant une vision produit claire, en priorisant les fonctionnalités, et en garantissant la valeur ajoutée pour les utilisateurs finaux."
+  },
+  {
+    "id": 3,
+    "title": "Agentic AI",
+    "description": "Je me suis également formé aux principes de l’Agentic AI, en explorant la conception et la coordination d’agents autonomes capables d’agir de manière proactive. Cette approche m’a permis de mieux comprendre la création de systèmes intelligents interagissant de façon dynamique avec leur environnement et orientés vers des objectifs définis."
+  }
+]

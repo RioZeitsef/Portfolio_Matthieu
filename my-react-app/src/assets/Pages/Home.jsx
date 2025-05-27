@@ -4,6 +4,7 @@ import DescriptionCard from "../components/DescriptionCard";
 import ProjectCard from "../components/ProjectCards";
 import SkillsSection from "../components/SkillsCard";
 import HarleyToCode from "/images/Harley_to_code.webp";
+import SkillsAccordion from "../components/SkillsAccordion";
 
 const Home = () => {
     return (
@@ -44,7 +45,7 @@ const Home = () => {
                 <DescriptionCard 
                     title={<span>Du web <strong>Vers l'IA</strong></span>}
                     titleVariant="h4"
-                    description="Durant mon alternance j'ai eu la chance de pouvoir travailler sur un projet de recherche et développement autour de l'IA. J'ai pu découvrir les systèmes d'agents autonomes et leur fonctionnement. J'ai également pu mettre en place un système de gestion de version pour le code source du projet, ce qui m'a permis de mieux comprendre les enjeux de la gestion de code dans un environnement collaboratif."
+                    description="Durant mon alternance j'ai eu la chance de pouvoir travailler sur divers projets de recherche documentaire grâce à un LLM personnalisé. Enfin, j'ai pu piloter un projet de R&D autour des LLM et des agents autonomes. J'ai ainsi pu développer un agent autonome capable de naviguer sur le web, d'interagir avec des sites et de récupérer des informations pertinentes pour répondre à des requêtes spécifiques. Ce projet m'a permis d'explorer les capacités des LLM dans un contexte pratique et de comprendre comment les intégrer efficacement dans des applications réelles."
                     descriptionVariant="body1"
                     width="100%"
                     showBullet={false}
@@ -61,6 +62,9 @@ const Home = () => {
                         marginBottom: '20px'
                     }}
                 />
+            </div>
+            <div>
+                 <SkillsAccordion />   
             </div>    
         </div>
     );
