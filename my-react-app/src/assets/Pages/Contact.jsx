@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, TextField, Button, Box, Paper, Alert } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import Styles from "../css/Pages.module.css";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
+        firstName: "",
         email: "",
         message: ""
     });
     const [status, setStatus] = useState(null);
+    const [error, setError] = useState(null);
     
     const handleChange = (e) => {
         setFormData({
@@ -17,16 +20,46 @@ const Contact = () => {
             [e.target.name]: e.target.value
         });
     };
+
+    useEffect(() => {
+        // Initialisation d'EmailJS
+        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    }, []);
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("sending");
+        setError(null);
         
-        // Simulation d'envoi pour démonstration
-        setTimeout(() => {
+        // Configuration EmailJS
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+        
+        // Paramètres pour l'envoi d'e-mail
+        const templateParams = {
+            from_name: `${formData.firstName} ${formData.name}`,
+            from_email: formData.email,
+            message: formData.message,
+            to_email: import.meta.env.VITE_EMAIL
+        };
+        
+        try {
+            // Nouvelle syntaxe pour @emailjs/browser
+            const result = await emailjs.send(
+                serviceId, 
+                templateId, 
+                templateParams
+            );
+            
+            console.log('Email envoyé avec succès!', result.text);
             setStatus("success");
-            setFormData({ name: "", email: "", message: "" });
-        }, 1500);
+            setFormData({ name: "", firstName: "", email: "", message: "" });
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
+            setStatus("error");
+            setError("Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard.");
+        }
     };
     
     // Style commun pour tous les champs de texte
@@ -84,6 +117,15 @@ const Contact = () => {
                             sx={{ mb: 4 }}
                         >
                             Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.
+                        </Alert>
+                    )}
+
+                    {status === "error" && (
+                        <Alert 
+                            severity="error" 
+                            sx={{ mb: 4 }}
+                        >
+                            {error}
                         </Alert>
                     )}
                     

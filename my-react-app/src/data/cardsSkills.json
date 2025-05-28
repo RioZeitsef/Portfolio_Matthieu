@@ -3,48 +3,48 @@
     "id": 1,
     "name": "React",
     "logo": "/images/skills_images/react.webp",
-    "level": 85
+    "level": 75
   },
   {
     "id": 2,
     "name": "Javascript",
     "logo": "/images/skills_images/js.webp",
-    "level": 90
+    "level": 75
   },
   {
     "id": 3,
     "name": "CSS",
     "logo": "/images/skills_images/css3.webp",
-    "level": 90
+    "level": 80
   },
   {
     "id": 4,
     "name": "Node.js",
     "logo": "/images/skills_images/node.webp",
-    "level": 70
+    "level": 60
   },
   {
     "id": 5,
     "name": "Python",
     "logo": "/images/skills_images/python.webp",
-    "level": 65
+    "level": 50
   },
   {
     "id": 6,
     "name": "Git",
     "logo": "/images/skills_images/git.webp",
-    "level": 75
+    "level": 65
   },
   {
     "id": 7,
     "name": "Docker",
     "logo": "/images/skills_images/docker.webp",
-    "level": 60
+    "level": 50
   },
   {
     "id": 8,
     "name": "Linux",
     "logo": "/images/skills_images/linux.webp",
-    "level": 80
+    "level": 30
   }
 ]
