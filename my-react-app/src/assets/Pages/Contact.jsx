@@ -1,8 +1,7 @@
-// filepath: /home/matthieum/Portfolio_Matthieu-1/my-react-app/src/assets/Pages/Contact.jsx
 import React, { useState } from "react";
 import { Container, Typography, TextField, Button, Box, Paper, Alert } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
-import Styles from "../css/Pages.module.css"; // Assurez-vous que le chemin est correct
+import Styles from "../css/Pages.module.css";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -23,14 +22,29 @@ const Contact = () => {
         e.preventDefault();
         setStatus("sending");
         
-        // Ici vous pouvez intégrer l'envoi réel du formulaire
-        // (par exemple avec un service comme EmailJS, FormSpree, etc.)
-        
         // Simulation d'envoi pour démonstration
         setTimeout(() => {
             setStatus("success");
             setFormData({ name: "", email: "", message: "" });
         }, 1500);
+    };
+    
+    // Style commun pour tous les champs de texte
+    const textFieldSx = {
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': { borderColor: '#DEB992' },
+            '&:hover fieldset': { borderColor: '#DEB992' },
+            '&.Mui-focused fieldset': { borderColor: '#DEB992' },
+        },
+        '& .MuiInputBase-input': { 
+            color: 'white' 
+        },
+        '& .MuiInputLabel-root': { 
+            color: '#DEB992' 
+        },
+        '& .MuiInputLabel-root.Mui-focused': { 
+            color: '#DEB992' 
+        }
     };
     
     return (
@@ -46,7 +60,7 @@ const Contact = () => {
                 >
                     <Typography 
                         variant="h3" 
-                        component="h1" 
+                        component="h2" 
                         gutterBottom 
                         sx={{ 
                             color: '#DEB992', 
@@ -56,6 +70,12 @@ const Contact = () => {
                         }}
                     >
                         Contactez-moi
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{ color: '#DEB992', mb: 4 }}
+                        >
+                        Vous avez un projet, une offre d'emploi ou simplement une question ? Je serais ravi d'en discuter et d'explorer nos possibilités de collaboration.
                     </Typography>
                     
                     {status === "success" && (
@@ -68,7 +88,7 @@ const Contact = () => {
                     )}
                     
                     <form onSubmit={handleSubmit}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, pt: 2 }}>
                             <TextField
                                 required
                                 label="Nom"
@@ -77,16 +97,19 @@ const Contact = () => {
                                 onChange={handleChange}
                                 fullWidth
                                 variant="outlined"
-                                InputLabelProps={{ style: { color: '#DEB992' } }}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': { borderColor: '#DEB992' },
-                                        '&:hover fieldset': { borderColor: '#DEB992' },
-                                        '&.Mui-focused fieldset': { borderColor: '#DEB992' },
-                                    },
-                                    '& .MuiInputBase-input': { color: 'white' }
-                                }}
+                                sx={textFieldSx}
                             />
+
+                            <TextField
+                                required
+                                label="Prénom"
+                                name="firstName"
+                                value={formData.firstName}
+                                onChange={handleChange}
+                                fullWidth
+                                variant="outlined"
+                                sx={textFieldSx}
+                            />    
                             
                             <TextField
                                 required
@@ -97,15 +120,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 fullWidth
                                 variant="outlined"
-                                InputLabelProps={{ style: { color: '#DEB992' } }}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': { borderColor: '#DEB992' },
-                                        '&:hover fieldset': { borderColor: '#DEB992' },
-                                        '&.Mui-focused fieldset': { borderColor: '#DEB992' },
-                                    },
-                                    '& .MuiInputBase-input': { color: 'white' }
-                                }}
+                                sx={textFieldSx}
                             />
                             
                             <TextField
@@ -118,15 +133,7 @@ const Contact = () => {
                                 multiline
                                 rows={6}
                                 variant="outlined"
-                                InputLabelProps={{ style: { color: '#DEB992' } }}
-                                sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                        '& fieldset': { borderColor: '#DEB992' },
-                                        '&:hover fieldset': { borderColor: '#DEB992' },
-                                        '&.Mui-focused fieldset': { borderColor: '#DEB992' },
-                                    },
-                                    '& .MuiInputBase-input': { color: 'white' }
-                                }}
+                                sx={textFieldSx}
                             />
                             
                             <Button

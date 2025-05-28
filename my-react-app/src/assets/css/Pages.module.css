@@ -28,10 +28,12 @@ main {
     background-size: cover; /* Pour couvrir tout l'espace disponible */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh; /* Pour que le fond couvre toute la hauteur de l'écran */
     width: 100%;
-        padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header */
+    padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header */
     box-sizing: border-box; /* Assurez-vous que le padding ne s'ajoute pas à la hauteur totale */
+    overflow: auto;
 
   }
 

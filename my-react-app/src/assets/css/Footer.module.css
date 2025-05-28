@@ -1,9 +1,18 @@
 footer {
   background-color: #061624; /* Couleur de fond */
+  border-top: #DEB992 2px solid; /* Bordure en bas */
+}
+
   .footertext {
     color: white; 
     padding: 20px 0; 
     font-size: 1rem; 
     margin: 0px
   }
-}
+
+  .footerdatatext {
+    color: #DEB992; 
+    font-size: 1rem; 
+    margin: 0px;
+    padding-bottom: 10px;
+  }

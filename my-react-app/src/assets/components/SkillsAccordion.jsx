@@ -10,7 +10,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import skillsData from '../../data/iaSkills.json';
 
 function SkillsAccordion() {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState('panel1');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
