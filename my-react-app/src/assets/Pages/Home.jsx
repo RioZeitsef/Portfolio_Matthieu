@@ -38,10 +38,10 @@ const Home = () => {
                     hideImageOnMobile={true}
                 />
             </div>
-            <div className="projects">
+            <div className={Styles.project}>
                 <ProjectCard /> 
             </div>
-            <div>
+            <div className={Styles.skills}>
                 <SkillsSection />
             </div>
             <div className={Styles.home}>
@@ -66,10 +66,10 @@ const Home = () => {
                     }}
                 />
             </div>
-            <div>
+            <div className={Styles.iaskills}>
                  <SkillsAccordion />   
             </div>
-            <div>
+            <div className={Styles.home}>
                 <DescriptionCard 
                     title={<span>Ouvert aux opportunités</span>}
                     titleVariant="h4"

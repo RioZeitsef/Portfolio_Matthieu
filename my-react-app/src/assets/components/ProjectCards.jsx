@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import cards from '../../data/cardsData.json';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 // Cette fonction aide à construire les URLs correctes pour les images
 const getImagePath = (path) => {
@@ -72,7 +73,7 @@ function ProjectCard() {
           gap: 3,
           boxSizing: 'border-box',
           justifyItems: 'center',
-          justifyContent: 'center', // Correction de la casse
+          justifyContent: 'center', 
         }}
       >
         {cards.map((card, index) => (
@@ -82,7 +83,7 @@ function ProjectCard() {
               height: '100%', 
               display: 'flex', 
               flexDirection: 'column',
-              maxWidth: '100%', // Utiliser 100% pour une meilleure adaptation
+              maxWidth: '100%', 
               width: '100%',
               backgroundColor: '#2c3e50',
             }}
@@ -117,7 +118,6 @@ function ProjectCard() {
                   }} 
                   onError={(e) => {
                     console.error(`Error loading image for ${card.title}:`, e);
-                    e.target.src = '/images/placeholder.png'; // Image de remplacement
                     e.target.style.backgroundColor = '#f0f0f0';
                   }}
                 />
@@ -139,12 +139,11 @@ function ProjectCard() {
       >
         <Fade in={openModal} timeout={500}>
           <Box sx={modalStyle}>
-            {/* Modal content */}
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
               <Typography id="modal-title" variant="h4" component="h2">
                 {modalData?.title}
               </Typography>
-              <IconButton onClick={handleCloseModal} aria-label="Fermer">
+              <IconButton onClick={handleCloseModal} aria-label="Fermer" sx={{ '&:hover': { backgroundColor: '#061624', color: "#DEB992;" } }}>
                 <CloseIcon />
               </IconButton>
             </Box>
@@ -167,7 +166,6 @@ function ProjectCard() {
               />
             </Box>
 
-            {/* Rest of modal content */}
             <Typography id="modal-description" variant="body1" sx={{ mb: 2, color: '#DEB992' }}>
               {modalData?.detailedDescription}
             </Typography>
@@ -199,16 +197,16 @@ function ProjectCard() {
               <Button
                 variant="contained"
                 sx={{ 
-                  backgroundColor: '#061624', // Couleur dorée personnalisée
+                  backgroundColor: '#061624', 
                   '&:hover': {
-                    backgroundColor: '#2d4a63' // Version plus foncée pour le survol
+                    backgroundColor: '#2d4a63' 
                   }
                 }}
                 href={modalData?.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                GitHub {<LaunchIcon sx={{ ml: 1 }} />}
               </Button>
             </Box>
           </Box>

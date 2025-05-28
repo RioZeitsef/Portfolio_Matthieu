@@ -36,6 +36,7 @@ main {
   }
 
     .homeContainer h1 {
+
         color: white; /* Couleur du texte */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
         font-size: 3rem; /* Taille de la police */
@@ -50,6 +51,10 @@ h2 {
     color: #DEB992
 }
 
-.SalestoDev {
-    padding : 20px;
+.project {
+    background-color: #06162499;
+}
+
+.skills {
+    background-color: #2c3e5079;
 }
