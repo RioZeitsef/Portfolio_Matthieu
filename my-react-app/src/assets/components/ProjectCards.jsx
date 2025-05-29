@@ -64,7 +64,7 @@ function ProjectCard() {
       </Typography>
       <Box
         sx={{
-          py: 4,
+          pb: '32px',
           maxWidth: '1200px',
           width: '80%',
           display: 'grid',
@@ -143,7 +143,7 @@ function ProjectCard() {
               <Typography id="modal-title" variant="h4" component="h2">
                 {modalData?.title}
               </Typography>
-              <IconButton onClick={handleCloseModal} aria-label="Fermer" sx={{ '&:hover': { backgroundColor: '#061624', color: "#DEB992;" } }}>
+              <IconButton onClick={handleCloseModal} aria-label="Fermer" sx={{ color: "#DEB992;", '&:hover': { backgroundColor: '#061624' } }}>
                 <CloseIcon />
               </IconButton>
             </Box>

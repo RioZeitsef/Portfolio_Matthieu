@@ -1,27 +1,27 @@
-import { BrowserRouter as Router, Route, Routes,  Navigate } from "react-router";
-import Contact from "./assets/Pages/Contact";
-import Layout from './assets/components/Layout.jsx';
-import Home from './assets/Pages/Home.jsx';
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes} from "react-router";
+import Header from './assets/components/Header';
+import Footer from './assets/components/Footer';
+import Home from './assets/Pages/Home';
+import Contact from './assets/Pages/Contact';
+import Styles from './assets/css/Pages.module.css';
 
 function App() {
-
   return (
-    <>
-      <Router>
-        <div className="App">
+    <Router>
+      <div className={Styles.app}>
+        <Header />
+        <main className={Styles.main}>
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="/about" element={<h2>About Page</h2>} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Route>  
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Autres routes */}
           </Routes>
-        </div>
-      </Router>
-    </>
-  )
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App
