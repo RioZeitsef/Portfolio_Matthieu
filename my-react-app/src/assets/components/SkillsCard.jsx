@@ -53,7 +53,7 @@ const SkillCard = ({ name, logo, level }) => {
         </Box>
       </Box>
       <CardContent sx={{ pt: 0, pb: '8px !important', textAlign: 'center' }}>
-        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', padding: '8px', color: '#AE7335' }}>
+        <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'bold', padding: '8px', color: '#DA8F41' }}>
           {name}
         </Typography>
         <Typography variant="caption" sx={{ fontSize: '0.8rem', color: '#DEB992', fontWeight: 'bold' }}>

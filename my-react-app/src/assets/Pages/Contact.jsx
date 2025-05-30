@@ -3,6 +3,7 @@ import { Container, Typography, TextField, Button, Box, Paper, Alert } from "@mu
 import SendIcon from '@mui/icons-material/Send';
 import Styles from "../css/Pages.module.css";
 import emailjs from '@emailjs/browser';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -82,6 +83,23 @@ const Contact = () => {
     
     return (
         <div className={Styles.homeContainer}>
+            <Helmet>
+                <title>Contact | Matthieu Metz - Développeur Web</title>
+                <meta name="description" content="Contactez Matthieu Metz pour discuter de vos projets de développement web, opportunités professionnelles ou toute autre question." />
+                
+                <meta property="og:title" content="Contact | Matthieu Metz - Développeur Web" />
+                <meta property="og:description" content="Contactez Matthieu Metz pour discuter de vos projets web et opportunités de collaboration." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://matthieumetz.netlify.app/contact" />
+                
+                <meta name="twitter:title" content="Contact | Matthieu Metz - Développeur Web" />
+                <meta name="twitter:description" content="Contactez Matthieu Metz pour discuter de vos projets web et opportunités de collaboration." />
+                
+                <link rel="canonical" href="matthieumetz.netlify.app/contact" />
+                
+                <meta name="keywords" content="contact développeur web, développeur web strasbourg contact" />
+            </Helmet>
+            
             <Container maxWidth="md" sx={{ py: 8 }}>
                 <Paper 
                     elevation={3} 

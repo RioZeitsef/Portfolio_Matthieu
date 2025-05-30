@@ -8,10 +8,36 @@ import ProjectCard from "../components/ProjectCards";
 import SkillsSection from "../components/SkillsCard";
 import HarleyToCode from "/images/Harley_to_code.webp";
 import SkillsAccordion from "../components/SkillsAccordion";
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
+        
         <div className={Styles.homeContainer}>
+            <Helmet>
+                {/* Balises Meta de base */}
+                <title>Matthieu Metz - Développeur Web Portfolio</title>
+                <meta name="description" content="Portfolio de Matthieu Metz, développeur web spécialisé en React, JavaScript et technologies front-end modernes. Découvrez mes projets et compétences." />
+                
+                {/* Balises Meta pour les réseaux sociaux - Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://matthieumetz.netlify.app/" />
+                <meta property="og:title" content="Matthieu Metz | Développeur Web Portfolio" />
+                <meta property="og:description" content="Portfolio professionnel de Matthieu Metz présentant mes compétences en développement web, mes projets et mon parcours." />
+
+                {/* Balises Meta pour Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content="matthieumetz.netlify.app" />
+                <meta name="twitter:title" content="Matthieu Metz | Développeur Web Portfolio" />
+                <meta name="twitter:description" content="Portfolio professionnel de Matthieu Metz présentant mes compétences en développement web, mes projets et mon parcours." />
+                
+                {/* Balises Meta pour les moteurs de recherche */}
+                <meta name="robots" content="index, follow" />
+                <meta name="keywords" content="développeur web, front-end, react, javascript, portfolio, développeur fullstack, UI/UX, développeur web strasbourg" />
+                <meta name="author" content="Matthieu Metz" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Helmet>
+
             <div className={Styles.home}>
                 <DescriptionCard 
                     title={<span>Du commerce au développement</span>}
