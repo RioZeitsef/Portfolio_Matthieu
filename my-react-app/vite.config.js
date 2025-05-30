@@ -47,13 +47,7 @@ export default defineConfig({
     },
     // Réduction de la taille des bundles
     rollupOptions: {
-      output: {
-        manualChunks: {
-          // Séparation des vendors (react, mui, etc.) du reste du code
-          vendor: ['react', 'react-dom', 'react-router-dom', '@mui/material'],
-          // Autres chunks personnalisés si nécessaire
-        }
-      }
+      external: ['react-router-dom'], // Exclure react-router-dom du bundle principal
     },
     // Compression des assets
     assetsInlineLimit: 4096, // Intégrer les petits fichiers en base64 (4KB par défaut)
