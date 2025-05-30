@@ -10,11 +10,18 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
   
-main {
-    flex: 1;
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .home {
@@ -24,18 +31,19 @@ main {
 }
 
 .homeContainer {
-    background-image: url('/images/Space_wpp.webp'); /* Ajustez le chemin selon l'emplacement de votre image */
-    background-size: cover; /* Pour couvrir tout l'espace disponible */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh; /* Pour que le fond couvre toute la hauteur de l'écran */
-    width: 100%;
-    padding-top: 80px; /* Ajoutez cette ligne pour compenser la hauteur du header */
-    box-sizing: border-box; /* Assurez-vous que le padding ne s'ajoute pas à la hauteur totale */
-    overflow: auto;
-
-  }
+  background-image: url('/images/Space_wpp.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  flex: 1; /* Permet au conteneur de prendre l'espace disponible */
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 60px; /* Espace pour le footer */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
 
     .homeContainer h1 {
 
@@ -46,6 +54,24 @@ main {
         padding-top: 20px; /* Ajoute un peu d'espace autour du texte */
     }   
 
+
+.footer {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  background-color: #061624;
+  border-top: #DEB992 2px solid;
+  padding: 10px 0;
+  margin-top: auto; /* Pousse le footer vers le bas */
+}
+
+.constructionOverlay {
+  flex: 1;
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 h2 {
     font-size: 32px;

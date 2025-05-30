@@ -5,6 +5,7 @@ import Header from './assets/components/Header';
 import Footer from './assets/components/Footer';
 import Home from './assets/Pages/Home';
 import Contact from './assets/Pages/Contact';
+import About from './assets/Pages/About';
 import Styles from './assets/css/Pages.module.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
               {/* Autres routes */}
             </Routes>
           </main>
