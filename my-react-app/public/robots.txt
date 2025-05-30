@@ -1,7 +1,4 @@
 User-agent: *
-disallow: /downloads/
-
-user-agent: magicsearchbot
-disallow: /uploads/
+Allow: /
 
 Sitemap: https://matthieumetz.netlify.app/sitemap.xml
