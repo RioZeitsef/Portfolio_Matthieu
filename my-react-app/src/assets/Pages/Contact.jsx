@@ -113,7 +113,6 @@ const Contact = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     zIndex: 1,
-                    paddingTop: '80px', // Pour compenser la hauteur du header
                 }}
             >
                 <Container maxWidth="md">
