@@ -70,7 +70,8 @@ const Home = () => {
                     cardStyles={{ 
                         backgroundColor: '#061624', 
                         borderRadius: '8px',
-                        color: 'white', 
+                        color: 'white',
+                        paddingTop: '80px', 
                     }}
                     titleStyles={{ 
                         fontSize: '2rem',

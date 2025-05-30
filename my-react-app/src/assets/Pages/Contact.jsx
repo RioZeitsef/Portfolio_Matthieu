@@ -102,7 +102,7 @@ const Contact = () => {
                 <meta name="keywords" content="contact développeur web, développeur web strasbourg contact" />
             </Helmet>
 
-            <Box 
+            <Box className={Styles.constructionOverlay}
                 sx={{
                     position: 'fixed',
                     top: 0,

@@ -38,7 +38,6 @@ body {
   background-attachment: fixed;
   flex: 1; /* Permet au conteneur de prendre l'espace disponible */
   width: 100%;
-  padding-top: 80px;
   padding-bottom: 60px; /* Espace pour le footer */
   box-sizing: border-box;
   display: flex;
@@ -85,4 +84,19 @@ h2 {
 
 .skills {
     background-color: #2c3e5079;
+}
+
+.contactOverlay {
+  animation: fadeIn 0.8s ease-in-out;
+  min-height: calc(100vh - 140px); /* Hauteur minimale pour permettre le scroll */
+}
+
+/* Si ce n'est pas déjà défini */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
