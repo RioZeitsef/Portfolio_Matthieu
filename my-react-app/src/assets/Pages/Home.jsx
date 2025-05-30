@@ -11,6 +11,22 @@ import SkillsAccordion from "../components/SkillsAccordion";
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matthieu Metz",
+        "url": "https://matthieumetz.netlify.app",
+        "sameAs": [
+        "https://www.linkedin.com/in/matthieu-metz-38376b1b1/",
+        "https://github.com/RioZeitsef"
+        ],
+        "jobTitle": "Développeur Web",
+        "worksFor": {
+        "name": "In job"
+        },
+        "description": "Développeur web spécialisé en React, JavaScript et technologies front-end modernes."
+    };
     return (
         
         <div className={Styles.homeContainer}>
@@ -36,6 +52,9 @@ const Home = () => {
                 <meta name="keywords" content="développeur web, front-end, react, javascript, portfolio, développeur fullstack, UI/UX, développeur web strasbourg" />
                 <meta name="author" content="Matthieu Metz" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <script type="application/ld+json">
+                    {JSON.stringify(jsonLd)}
+                </script>
             </Helmet>
 
             <div className={Styles.home}>
