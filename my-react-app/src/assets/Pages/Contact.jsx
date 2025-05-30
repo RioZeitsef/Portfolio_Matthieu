@@ -84,8 +84,10 @@ const Contact = () => {
     return (
         <div className={Styles.homeContainer}>
             <Helmet>
-                <title>Contact | Matthieu Metz - Développeur Web</title>
-                <meta name="description" content="Contactez Matthieu Metz pour discuter de vos projets de développement web, opportunités professionnelles ou toute autre question." />
+                <title>Contact | Matthieu Metz | Développeur Web</title>
+                <meta 
+                    name="description" 
+                    content="Contactez Matthieu Metz pour discuter de vos projets de développement web, opportunités professionnelles ou toute autre question." />
                 
                 <meta property="og:title" content="Contact | Matthieu Metz - Développeur Web" />
                 <meta property="og:description" content="Contactez Matthieu Metz pour discuter de vos projets web et opportunités de collaboration." />
@@ -99,7 +101,7 @@ const Contact = () => {
                 
                 <meta name="keywords" content="contact développeur web, développeur web strasbourg contact" />
             </Helmet>
-            
+
             <Container maxWidth="md" sx={{ py: 8 }}>
                 <Paper 
                     elevation={3} 

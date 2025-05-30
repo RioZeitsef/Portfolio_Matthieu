@@ -32,8 +32,10 @@ const Home = () => {
         <div className={Styles.homeContainer}>
             <Helmet>
                 {/* Balises Meta de base */}
-                <title>Matthieu Metz - Développeur Web Portfolio</title>
-                <meta name="description" content="Portfolio de Matthieu Metz, développeur web spécialisé en React, JavaScript et technologies front-end modernes. Découvrez mes projets et compétences." />
+                <title>Matthieu Metz | Développeur Web | Portfolio</title>
+                <meta 
+                    name="description" 
+                    content="Portfolio de Matthieu Metz, développeur web spécialisé en React, JavaScript et technologies front-end modernes. Découvrez mes projets et compétences." />
                 
                 {/* Balises Meta pour les réseaux sociaux - Open Graph */}
                 <meta property="og:type" content="website" />
