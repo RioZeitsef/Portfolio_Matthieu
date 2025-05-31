@@ -46,5 +46,12 @@
     "name": "Linux",
     "logo": "/images/skills_images/linux.webp",
     "level": 30
+  },
+  {
+    "id": 9,
+    "name": "Jira",
+    "logo": "/images/skills_images/jira.webp",
+    "level": 60
   }
+
 ]

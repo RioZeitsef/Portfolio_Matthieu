@@ -114,7 +114,9 @@ function ProjectCard() {
                     borderRadius: '8px',
                     marginBottom: '16px',
                     objectFit: 'cover',
+                    objectPosition: 'center top',
                     aspectRatio: '16/9',
+                    
                   }} 
                   onError={(e) => {
                     console.error(`Error loading image for ${card.title}:`, e);
@@ -157,6 +159,8 @@ function ProjectCard() {
                   maxHeight: '400px',
                   objectFit: 'cover',
                   borderRadius: '8px',
+                  objectPosition: 'center top',
+                  aspectRatio: '16/9',
                 }}
                 onError={(e) => {
                   console.error(`Error loading modal image:`, e);
@@ -194,20 +198,22 @@ function ProjectCard() {
             </Box>
 
             <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
-              <Button
-                variant="contained"
-                sx={{ 
-                  backgroundColor: '#061624', 
-                  '&:hover': {
-                    backgroundColor: '#2d4a63' 
-                  }
-                }}
-                href={modalData?.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub {<LaunchIcon sx={{ ml: 1 }} />}
-              </Button>
+              {modalData?.githubLink && (
+                <Button
+                  variant="contained"
+                  sx={{ 
+                    backgroundColor: '#061624', 
+                    '&:hover': {
+                      backgroundColor: '#2d4a63' 
+                    }
+                  }}
+                  href={modalData?.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub {<LaunchIcon sx={{ ml: 1 }} />}
+                </Button> 
+              )}  
             </Box>
           </Box>
         </Fade>  

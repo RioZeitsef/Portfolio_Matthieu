@@ -4,7 +4,7 @@
     "img": "/images/project_images/ArgentBank.webp",
     "title": "ArgentBank",
     "description": "Création du front d'une agence bancaire.",
-    "detailedDescription": "J'ai développé une application web bancaire complète avec React et Redux pour ArgentBank, incluant un système d'authentification sécurisé et une architecture évolutive. Le projet comprenait deux phases : l'implémentation du front-end avec gestion d'état Redux, et la conception d'API REST pour les fonctionnalités de transactions. J'ai mis l'accent sur les bonnes pratiques de développement durable (Green Code) et la création d'une architecture modulaire anticipant les évolutions futures du produit.",
+    "detailedDescription": "J'ai développé une application web bancaire complète avec React et Redux pour ArgentBank, incluant un système d'authentification sécurisé et une architecture évolutive. Le projet comprenait deux phases : l'implémentation du front-end avec gestion d'état Redux, et le branchement d'une API REST pour les fonctionnalités de transactions. J'ai mis l'accent sur les bonnes pratiques de développement durable (Green Code) et la création d'une architecture modulaire anticipant les évolutions futures du produit.",
     "technologies": ["React", "Redux", "Swagger", "Redux Toolkit", "Axios", "CSS"],
     "githubLink": "https://github.com/RioZeitsef/Projet11_ArgentBank-Front.git",
     "demoLink": "https://plants-demo.netlify.app"
@@ -21,11 +21,10 @@
   },
   {
     "id": 3,
-    "img": "/images/project_images/Kasa.webp",
-    "title": "Kasa",
-    "description": "Création d'un site de location immobilière saisonnière.",
-    "detailedDescription": "J'ai développé une galerie photo interactive et des composants d'interface utilisateur en respectant des spécifications techniques précises. Ce projet m'a permis de créer des composants React réutilisables avec une attention particulière portée à l'expérience utilisateur et au responsive design. Les fonctionnalités incluent un système de navigation circulaire avancé, une gestion intelligente de l'affichage des contrôles, et des composants d'accordéon interactifs avec gestion d'état dynamique.",
-    "technologies": ["React", "Vite", "ReactRouter", "CSS"],
-    "githubLink": "https://github.com/RioZeitsef/Projet7_Kasa.git"
+    "img": "/images/project_images/Qwenta.webp",
+    "title": "Qwenta",
+    "description": "Planification du développement d'un Menu Maker.",
+    "detailedDescription": "Planification complète d'une application Menu Maker pour restaurateurs, comprenant la rédaction de spécifications techniques et l'organisation d'un tableau Kanban avec attribution précise des tâches entre équipes front et back-end. La méthodologie Agile déployée (story points, documentation) a permis d'établir une base solide pour le développement du projet.",
+    "technologies": ["Jira", "Kanban", "Feedly", "Figma", "Agile"]
   }
 ]
